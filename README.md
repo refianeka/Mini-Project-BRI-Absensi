@@ -22,7 +22,8 @@ Berikut adalah langkah-langkah untuk menjalankan aplikasi setelah Anda telah men
     ```
 
 3. **Konfigurasi Environment**
-    Salin file `.env.example` menjadi `.env` atau gunakan script dibawah ini dan sesuaikan konfigurasi dalam file `.env` sesuai dengan lingkungan Anda.
+
+   Salin file `.env.example` menjadi `.env` atau gunakan script dibawah ini dan sesuaikan konfigurasi dalam file `.env` sesuai dengan lingkungan Anda.
     ```
     cp .env.example .env
     ```
@@ -33,11 +34,13 @@ Berikut adalah langkah-langkah untuk menjalankan aplikasi setelah Anda telah men
     ```
 
 5. **Migrasi Basis Data (jika diperlukan)**
-    Jika proyek Anda menggunakan migrasi database, jalankan migrasi untuk membuat atau memperbarui struktur database.
+
+   Jika proyek Anda menggunakan migrasi database, jalankan migrasi untuk membuat atau memperbarui struktur database.
     ```
     php artisan migrate
     ```
 6. **Membuat Storage link**
+
    Untuk penggunaan folder photo
    ```
    php artisan storage:link
@@ -52,7 +55,8 @@ Berikut adalah langkah-langkah untuk menjalankan aplikasi setelah Anda telah men
    ```
     
 7. **Jalankan Server**
-    Terakhir, jalankan server pengembangan bawaan Laravel menggunakan perintah:
+
+   Terakhir, jalankan server pengembangan bawaan Laravel menggunakan perintah:
     ```
     php artisan serve
     ```
