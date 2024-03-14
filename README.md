@@ -7,6 +7,58 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Langkah-langkah Menjalankan Aplikasi
+
+Berikut adalah langkah-langkah untuk menjalankan aplikasi setelah Anda telah mengkloning repository:
+
+1. **Clone Repository ini**
+    ```
+    git clone https://github.com/refianeka/Mini-Project-BRI-Absensi.git
+    ```
+    
+2. **Instal Dependensi**
+    ```
+    composer install
+    ```
+
+3. **Konfigurasi Environment**
+    Salin file `.env.example` menjadi `.env` atau gunakan script dibawah ini dan sesuaikan konfigurasi dalam file `.env` sesuai dengan lingkungan Anda.
+    ```
+    cp .env.example .env
+    ```
+
+4. **Generate Key Aplikasi**
+    ```
+    php artisan key:generate
+    ```
+
+5. **Migrasi Basis Data (jika diperlukan)**
+    Jika proyek Anda menggunakan migrasi database, jalankan migrasi untuk membuat atau memperbarui struktur database.
+    ```
+    php artisan migrate
+    ```
+6. **Membuat Storage link**
+   Untuk penggunaan folder photo
+   ```
+   php artisan storage:link
+   ```
+   dan pada file .env ubah pada bagian
+   ```
+   FILESYSTEM_DRIVER=local
+   ```
+   menjadi
+   ```
+   FILESYSTEM_DRIVER=public
+   ```
+    
+7. **Jalankan Server**
+    Terakhir, jalankan server pengembangan bawaan Laravel menggunakan perintah:
+    ```
+    php artisan serve
+    ```
+
+Setelah itu, Anda dapat mengakses aplikasi Anda di `http://localhost:8000` atau `http://127.0.0.1:8000/` dalam browser web Anda.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
