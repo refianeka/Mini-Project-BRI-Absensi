@@ -78,7 +78,7 @@ class UserController extends Controller
 
         $newName = 'default.jpg';
 
-        if ($request->file('photo')) {
+        if ($request->hasFile('photo')) {
 
             $extension = $request->file('photo')->getClientOriginalExtension();
             $newName = $request->name . '-' . now()->timestamp . '.' . $extension;
@@ -160,10 +160,9 @@ class UserController extends Controller
         $checkUser = Attendance::where('assistant_id', $user->id)->first();
 
         if ($checkUser) {
-            
+
             Alert::error('Failed', 'Gagal menghapus ' . $user->name);
             return redirect()->back();
-
         } else {
 
             if ($user->photo && $user->photo !== 'default.jpg') {

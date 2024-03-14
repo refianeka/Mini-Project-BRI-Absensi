@@ -27,8 +27,13 @@
             <!-- Notifications -->
             <li class="nav-item dropdown">
                 <a class="nav-link avatar-with-name" id="navbarDropdownMenuLink" data-toggle="dropdown" href="#">
-                    <img src="{{ asset('storage/photo/' . Auth::user()->photo) }}" class="d-inline-block align-top"
-                        alt="">
+                    @if (Auth::user()->photo == 'default.jpg')
+                        <img src="{{ asset('assets' . '/img/' . Auth::user()->photo) }}" class="d-inline-block align-top"
+                            alt="">
+                    @else
+                        <img src="{{ asset('storage/photo/' . Auth::user()->photo) }}" class="d-inline-block align-top"
+                            alt="">
+                    @endif
                 </a>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
